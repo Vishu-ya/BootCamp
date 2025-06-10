@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Quiz Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>College Quiz Portal</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#quizzes">Quizzes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Welcome to the Quiz Hub</h2>
+    <p>Challenge yourself with quizzes on DSA, Aptitude, Math, and more!</p>
+    <a href="#quizzes" class="btn">Explore Quizzes</a>
+  </section>
+
+  <section id="quizzes" class="quiz-section">
+    <h2>Available Quizzes</h2>
+    <div class="quiz-list">
+      <div class="quiz-card" onclick="startQuiz('dsa')">DSA</div>
+      <div class="quiz-card" onclick="startQuiz('aptitude')">Aptitude</div>
+      <div class="quiz-card" onclick="startQuiz('math')">Math</div>
+      <div class="quiz-card" onclick="startQuiz('mental')">Mental Ability</div>
+      <div class="quiz-card" onclick="startQuiz('html')">HTML</div>
+      <div class="quiz-card" onclick="startQuiz('css')">CSS</div>
+      <div class="quiz-card" onclick="startQuiz('js')">JavaScript</div>
+    </div>
+  </section>
+
+  <section id="quiz-container" class="hidden">
+    <h2 id="quiz-title"></h2>
+    <div id="question-container">
+      <p id="question"></p>
+      <div id="answers"></div>
+      <button id="next-btn" class="btn" onclick="nextQuestion()">Next</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 College Quiz Portal | Designed by Vishal</p>
+  </footer>
+
+  <script src="quize.js"></script>
+</body>
+</html>
